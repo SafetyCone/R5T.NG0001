@@ -21,7 +21,7 @@ namespace R5T.NG0001.Q000
             var result_c_d = Instances.Operations.Add_Checked(c, d);
 
             var result_a_b_c_d = Instances.Operations.Add_Checked(result_a_b.Value, result_c_d.Value)
-                .WithSuccess(new ExceptionalError(""))
+                .WithError(new ExceptionalError("", new Exception("")))
                 .WithReasons(result_a_b.Reasons)
                 .WithReasons(result_c_d.Reasons);
 
